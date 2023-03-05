@@ -1,10 +1,10 @@
-use chrono::NaiveDateTime;
 use yew::callback::Callback;
 use yew::function_component;
 use yew::prelude::*;
 use yew::Properties;
 
 use super::super::data::Menu;
+use super::super::time::timestamp_to_isodate;
 
 static PRICE_DIGIT: usize = 2;
 
@@ -38,11 +38,7 @@ pub fn menu_thumbnail(props: &MenuThumbnailProps) -> Html {
                 {props.menu.rate}
             </div>
             <div class="thumbnail-text thumbnail-date">
-                {
-                    NaiveDateTime::from_timestamp_millis(props.menu.timestamp)
-                    .expect("Invalid datetime")
-                    .format("%Y-%m-%d").to_string()
-                }
+                { timestamp_to_isodate(props.menu.timestamp) }
             </div>
             <div class="thumbnail-text thumbnail-price">
                 {format!(
