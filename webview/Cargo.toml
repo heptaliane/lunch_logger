@@ -23,9 +23,14 @@ features = [
 [dependencies.yew_icons]
 version = "0.7.0"
 features = [
-    "FontAwesomeSolidArrowLeft",
     "BootstrapMap",
-    "HeroiconsSolidBuildingStorefront",
+    "FontAwesomeSolidArrowLeft",
     "FontAwesomeSolidUtensils",
+    "HeroiconsSolidBuildingStorefront",
+    "LucideFilter",
+    "OcticonsNoEntry24",
+    "OcticonsPencil24",
+    "OcticonsPlusCircle24",
+    "OcticonsSync24",
 ]
 
